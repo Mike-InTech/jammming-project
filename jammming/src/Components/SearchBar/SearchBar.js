@@ -1,32 +1,16 @@
-import {useState} from 'react';
+import React from "react";
 
-
-function SearchBar() {
-    const [userInput, setUserInput] = useState('');
-
-    function handleUserInput(e) {
-        setUserInput(e.target.value);
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        //#FIXME: Handle the search logic here, e.g., make an API call or filter data
-        
-      };
-
+function SearchBar () {
     return (
-        <form onSubmit={handleSubmit}>
-            <input 
-                id='search-bar' 
-                type='text' 
-                placeholder='Search' 
-                value={userInput}
-                onChange={handleUserInput}
-            />
-        
-            <button type='submit'>Search</button>
-        </form>
-    );
+        <div className="SearchBar">
+        <input
+          placeholder="Enter Song, Album, or Artist"
+        />
+        <button className="SearchButton" >
+          SEARCH
+        </button>
+      </div>
+        );
 }
 
 export default SearchBar;
