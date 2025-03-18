@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './SearchResults.css'
 
 function SearchResults () {
     return (
